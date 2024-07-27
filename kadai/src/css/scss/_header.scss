@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 30px auto;
+  width: 90%;
+  height: 70px;
+  background-color: #fff;
+  &__title {
+    display: flex;
+    align-items: end;
+  }
+  &__title--sub {
+    font-size: 20px;
+  }
+}
