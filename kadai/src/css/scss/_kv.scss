@@ -1,0 +1,36 @@
+.kv {
+  background-image: url(../../../isara_画像素材/main.jpg);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  width: 100%;
+  height: 500px;
+  &.kv__center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  &.kv__center--ttl {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  &.kv__center--ttl-sub {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &.kv__logo {
+    max-width: 317px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .kv {
+    background-image: url(../../../isara_画像素材/mainsp.jpg);
+    height: 312px;
+    &.kv__logo {
+      max-width: 317px;
+      width: 90%;
+    }
+  }
+}

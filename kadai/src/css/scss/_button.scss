@@ -1,0 +1,90 @@
+.btn {
+  cursor: pointer;
+  // position: absolute;
+  // right: 0;
+  // top: 16px;
+  color: #fff;
+  background-color: #da6b64;
+  text-align: center;
+
+  &.btn__header {
+    padding: 11px 40px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #da6b64;
+    text-align: center;
+  }
+
+  &.btn__inducement {
+    font-size: 28px;
+    padding: 30px 120px;
+    border-radius: 50px;
+    margin: 45px auto;
+    max-width: 1028px;
+    color: #fff;
+    background-color: #da6b64;
+    text-align: center;
+  }
+  &.btn__indecement:hover {
+    background-color: #da6b64;
+    opacity: 0.7;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .btn {
+    &.btn__header--sp {
+      display: block;
+      // position: absolute;
+      // right: 0px;
+      // top: 0;
+      padding: 9px 11px;
+    }
+    &.btn__inducement {
+      font-size: 20px;
+      padding: 15px 20px;
+      margin: 10px 20px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.sns__btn {
+  text-align: center;
+  margin-top: 13px;
+}
+
+.sns__btn ul {
+  display: flex;
+  justify-content: center;
+}
+
+.tw-btn a,
+.fb-btn iframe {
+  display: inline-block;
+  height: 20px;
+  overflow: hidden;
+}
+
+.pagetop {
+  width: 30px;
+  height: 30px;
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  bottom: 90px;
+  right: 50px;
+  background-color: #ececec;
+  padding: 20px;
+  z-index: 100;
+}
+.pagetop::before {
+  content: "\f077";
+  font-size: 30px;
+  display: inline-block;
+  // text-rendering: auto;
+  // -webkit-font-smoothing: antialiased;
+}

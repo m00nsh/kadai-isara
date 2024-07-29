@@ -131,7 +131,6 @@
   --bs-form-invalid-border-color: #dc3545;
 }
 [data-bs-theme="dark"] {
-  color-scheme: dark;
   --bs-body-color: #dee2e6;
   --bs-body-color-rgb: 222, 226, 230;
   --bs-body-bg: #212529;
@@ -185,11 +184,7 @@
   --bs-form-invalid-color: #ea868f;
   --bs-form-invalid-border-color: #ea868f;
 }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -266,7 +261,7 @@ h6 {
 }
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 abbr[title] {
   -webkit-text-decoration: underline dotted;
@@ -296,6 +291,11 @@ ol ul,
 ul ol {
   margin-bottom: 0;
 }
+ul,
+li {
+  list-style: none;
+}
+
 dt {
   font-weight: 700;
 }
@@ -332,8 +332,8 @@ sup {
   top: -0.5em;
 }
 a {
-  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
-  text-decoration: underline;
+  text-decoration: none;
+  color: unset;
 }
 a:hover {
   --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
