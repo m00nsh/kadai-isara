@@ -1,10 +1,10 @@
 .header {
   width: 100%;
   background-color: #fff;
-  // position: fixed;
-  // z-index: 10;
+  position: fixed;
+  z-index: 10;
   &.header__inner {
-    width: 1170px;
+    width: 1180px;
     max-width: calc(100% - 20px);
     display: flex;
     justify-content: space-between;
@@ -35,12 +35,15 @@
 
 @media screen and (max-width: 768px) {
   .header {
+    &.header__inner {
+      margin: 0;
+    }
     &.header__title {
       flex-direction: column;
       align-items: start;
     }
     &.header__title--sub {
-      font-size: 15px;
+      font-size: 10px;
       order: -1;
     }
   }

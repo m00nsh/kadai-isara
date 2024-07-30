@@ -1,0 +1,92 @@
+.about {
+  text-align: center;
+  padding: 0 0 40px 0;
+  &.about__top {
+    background-color: #fef5e0;
+  }
+  &.about__bottom {
+    background-image: url(../../../isara_画像素材/aboutsecondbg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    text-align: center;
+  }
+  &.about__blue {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #016ea9;
+    color: #fff;
+  }
+}
+
+.squarebox {
+  margin: 0 auto;
+  position: relative;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.squarebox::before,
+.squarebox::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.squarebox::before {
+  top: 0;
+  left: 0;
+  border-top: 4px solid #ebb94d;
+  border-left: 4px solid #ebb94d;
+}
+.squarebox::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 4px solid #ebb94d;
+  border-right: 4px solid #ebb94d;
+}
+
+@media screen and (max-width: 786px) {
+  .about {
+    &.about__bottom {
+      background-image: url(../../../isara_画像素材/aboutsecondbgsp.jpg);
+    }
+  }
+  .squarebox {
+    margin: 0 auto;
+    position: relative;
+    width: 95%;
+    max-width: calc(100% - 10px);
+    padding: 5px 20px;
+    box-sizing: border-box;
+  }
+}
+
+.circle {
+  color: #fff;
+  background-color: #ebb94d;
+  padding: 0;
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  top: -40px;
+}
+
+@media screen and (max-width: 786px) {
+  .circle {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+  }
+}

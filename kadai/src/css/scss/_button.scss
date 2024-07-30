@@ -1,8 +1,8 @@
 .btn {
   cursor: pointer;
-  // position: absolute;
-  // right: 0;
-  // top: 16px;
+  position: absolute;
+  right: 0;
+  top: 16px;
   color: #fff;
   background-color: #da6b64;
   text-align: center;
@@ -12,22 +12,23 @@
     font-size: 14px;
     font-weight: bold;
     border-radius: 25px;
-    color: #fff;
-    background-color: #da6b64;
-    text-align: center;
+    // color: #fff;
+    // background-color: #da6b64;
+    // text-align: center;
   }
 
   &.btn__inducement {
     font-size: 28px;
+    font-weight: bold;
     padding: 30px 120px;
     border-radius: 50px;
     margin: 45px auto;
     max-width: 1028px;
-    color: #fff;
-    background-color: #da6b64;
-    text-align: center;
+    // color: #fff;
+    // background-color: #da6b64;
+    // text-align: center;
   }
-  &.btn__indecement:hover {
+  &.btn__inducement:hover {
     background-color: #da6b64;
     opacity: 0.7;
   }
@@ -37,9 +38,9 @@
   .btn {
     &.btn__header--sp {
       display: block;
-      // position: absolute;
-      // right: 0px;
-      // top: 0;
+      position: absolute;
+      right: 0px;
+      top: 0;
       padding: 9px 11px;
     }
     &.btn__inducement {
@@ -72,7 +73,6 @@
 .pagetop {
   width: 30px;
   height: 30px;
-  display: block;
   cursor: pointer;
   position: fixed;
   bottom: 90px;
@@ -80,11 +80,17 @@
   background-color: #ececec;
   padding: 20px;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.pagetop::before {
-  content: "\f077";
-  font-size: 30px;
-  display: inline-block;
-  // text-rendering: auto;
-  // -webkit-font-smoothing: antialiased;
+
+.allow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(-45deg);
+  margin-top: 5px;
 }
