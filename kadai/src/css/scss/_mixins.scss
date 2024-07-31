@@ -1,0 +1,12 @@
+@mixin mediumtxt {
+  font-size: 20px;
+  font-weight: 700px;
+}
+@mixin smalltxt {
+  font-size: 14px;
+  font-weight: 300px;
+}
+@mixin largetxt {
+  font-size: 28px;
+  font-weight: 700px;
+}
