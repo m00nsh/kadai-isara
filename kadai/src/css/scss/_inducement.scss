@@ -6,15 +6,19 @@
   &.inducement__txt {
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
-  &.inducement__txt--sub {
+  &__txt--sub {
+    font-size: 15px;
+    line-height: 1.4em;
     padding: 2px 4px;
-    font-size: 90%;
-    color: #c7254e;
-    background-color: #f9f2f4;
     border-radius: 4px;
+    color: #c7254e;
+    background: linear-gradient(transparent 0%, #f9f2f4 0%);
+    display: inline;
   }
-  &.inducement__txt--under {
+  &__txt--under {
+    margin: 30px 0;
     font-size: 12px;
   }
 }
@@ -22,13 +26,13 @@
 @media screen and (max-width: 786px) {
   .inducement {
     padding: 15px 0;
-    &.inducement__txt {
+    &__txt {
       font-size: 15px;
     }
-    &.inducement__txt--under {
+    &__txt--under {
       font-size: 10px;
       max-width: calc(100% - 20px);
-      margin: 0 auto;
+      margin: 30px auto;
     }
   }
 }

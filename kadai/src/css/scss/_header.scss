@@ -1,9 +1,10 @@
 .header {
   width: 100%;
+  // height: 75px;
   background-color: #fff;
   position: fixed;
   z-index: 10;
-  &.header__inner {
+  &__inner {
     width: 1180px;
     max-width: calc(100% - 20px);
     display: flex;
@@ -14,13 +15,13 @@
     height: 75px;
     position: relative;
   }
-  &.header__title {
+  &__title {
     display: flex;
     align-items: end;
     gap: 10px;
     bottom: 10px;
   }
-  &.header__title--sub {
+  &__title--sub {
     font-size: 20px;
     font-weight: bold;
     margin: 0;
@@ -33,16 +34,20 @@
   width: 128px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 786px) {
   .header {
-    &.header__inner {
+    &__inner {
+      max-width: 100%;
       margin: 0;
+      height: 60px;
     }
-    &.header__title {
+    &__title {
       flex-direction: column;
       align-items: start;
+      gap: 0;
+      margin-left: 10px;
     }
-    &.header__title--sub {
+    &__title--sub {
       font-size: 10px;
       order: -1;
     }

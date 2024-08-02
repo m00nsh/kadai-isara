@@ -1,0 +1,27 @@
+.learning {
+  max-width: 100%;
+  // width: 1180px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  &__top {
+    padding: 20px 0 40px;
+  }
+  &__top--ttl,
+  &__top--txt {
+    margin: 20px 0;
+  }
+  &__top--bold {
+    margin-top: 40px;
+    font-weight: bold;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 0;
+  }
+  &__img img {
+    width: 20%;
+  }
+}
