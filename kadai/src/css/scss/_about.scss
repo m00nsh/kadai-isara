@@ -1,3 +1,5 @@
+@use "mixins";
+
 .about {
   text-align: center;
   // padding: 0 0 40px 0;
@@ -12,13 +14,16 @@
     color: #fff;
   }
   &__bottom--container {
+    width: 80%;
     color: #000;
+    margin: 0 auto;
   }
   &__bottom--txt {
     font-weight: bold;
     margin: 30px;
   }
   &__bottom--text {
+    font-size: 20px;
     font-weight: bold;
   }
   &--blue {
@@ -33,23 +38,24 @@
   .about {
     &__bottom {
       background-image: url(../../../isara_画像素材/aboutsecondbgsp.jpg);
+      &--text {
+        font-size: 16px;
+      }
     }
   }
 }
 
-.circle {
+.circle__orange {
+  @include mixins.circle(80px);
   color: #fff;
   background-color: #ebb94d;
-  padding: 0;
-  margin: 0;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  text-align: center;
-  display: inline-block;
-  border-radius: 50%;
-  position: relative;
   top: -40px;
+}
+.circle__white {
+  @include mixins.circle(80px);
+  color: #ebb94d;
+  background-color: #fff;
+  top: 0px;
 }
 
 @media screen and (max-width: 786px) {
@@ -57,6 +63,11 @@
     width: 60px;
     height: 60px;
     line-height: 60px;
+    font-size: 12px;
+  }
+  .circle__orange,
+  .circle__white {
+    @include mixins.circle(60px);
     font-size: 12px;
   }
 }

@@ -1,11 +1,22 @@
 {
   "cSpell.words": [
     "bace",
+    "bangkokbg",
+    "bangkokbgsp",
     "EACE",
+    "flowbox",
+    "flowdetailpc",
+    "flowright",
     "introbottom",
     "isara",
     "Kentaro",
     "Koga",
-    "pagetop"
-  ]
+    "notepcicon",
+    "orangefont",
+    "pagetop",
+    "squarebox",
+    "teacherbg",
+    "teacherbgsp"
+  ],
+  "compile-hero.disable-compile-files-on-did-save-code": false
 }

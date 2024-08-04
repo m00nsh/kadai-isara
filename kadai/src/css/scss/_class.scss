@@ -1,0 +1,34 @@
+.class {
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  &__top {
+    padding: 40px 0;
+    background-image: url(../../../isara_画像素材/classbg.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  &__title {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  &__container {
+    width: 50%;
+    margin: 0 auto;
+  }
+  &__list--txt {
+    padding: 10px;
+    border-bottom: 1px dotted #e5e5e5;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .class {
+    &__top {
+      background-image: url(../../../isara_画像素材/classbgsp.jpg);
+    }
+    &__container {
+      width: 90%;
+    }
+  }
+}

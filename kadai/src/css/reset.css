@@ -277,13 +277,12 @@ address {
 }
 ol,
 ul {
-  padding-left: 2rem;
+  padding: 0;
 }
 ol,
 ul,
 dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0;
 }
 ol ol,
 ul ul,

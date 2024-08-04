@@ -1,0 +1,53 @@
+.bangkok {
+  max-width: 100%;
+  padding: 40px 0;
+  background-image: url(../../../isara_画像素材/bangkokbg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  &__detail {
+    width: 60%;
+    margin: 0 auto;
+  }
+  &__ttl {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  &__txt {
+    font-weight: bold;
+    font-size: 16px;
+    &--sub {
+      font-weight: normal;
+      font-size: 14px;
+    }
+    &--bold {
+      font-size: 20px;
+    }
+  }
+  &__list {
+    margin: 20px 0;
+    list-style-type: style;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .bangkok {
+    background-image: url(../../../isara_画像素材/bangkokbgsp.jpg);
+    &__detail {
+      width: 80%;
+    }
+    &__ttl {
+      font-size: 18px;
+      text-align: center;
+    }
+    &__txt {
+      font-size: 12px;
+      &--sub {
+        font-size: 12px;
+      }
+      &--bold {
+        font-size: 15px;
+      }
+    }
+  }
+}

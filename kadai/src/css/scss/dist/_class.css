@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.class {
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.class__top {
+  padding: 40px 0;
+  background-image: url(../../../isara_画像素材/classbg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.class__title {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.class__container {
+  width: 50%;
+  margin: 0 auto;
+}
+.class__list--txt {
+  padding: 10px;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+@media screen and (max-width: 1000px) {
+  .class__top {
+    background-image: url(../../../isara_画像素材/classbgsp.jpg);
+  }
+  .class__container {
+    width: 90%;
+  }
+}

@@ -10,3 +10,15 @@
   font-size: 28px;
   font-weight: 700px;
 }
+
+@mixin circle($x) {
+  padding: 0;
+  margin: 0;
+  width: $x;
+  height: $x;
+  line-height: $x;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+}

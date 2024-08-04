@@ -1,0 +1,85 @@
+@charset "UTF-8";
+.member {
+  max-width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  background-image: url(../../../isara_画像素材/teacherbg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.member__ttl--sub {
+  margin: 20px 0 50px;
+}
+.member__wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.member__ttl::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../../../isara_画像素材/cardicon.png);
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.member__content--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 0;
+}
+.member__content {
+  margin: 0 auto;
+}
+.member__content--box {
+  width: 25%;
+}
+.member__content--img {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  bottom: -35px;
+}
+.member__txt--box {
+  font-size: 16px;
+  border: 3px solid #fff;
+  padding: 40px;
+  min-height: 250px;
+}
+.member__txt {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1500px) {
+  .member__txt--box {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .member {
+    background-image: url(../../../isara_画像素材/teacherbgsp.jpg);
+  }
+  .member__content {
+    width: 85%;
+  }
+  .member__content--wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .member__content--box {
+    width: 100%;
+    min-height: 391px;
+  }
+  .member__txt--box {
+    height: auto;
+    min-height: 1px;
+  }
+}
