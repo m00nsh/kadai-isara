@@ -22,6 +22,7 @@
     }
     &--bold {
       font-size: 20px;
+      font-weight: bold;
     }
   }
   &__list {
@@ -37,14 +38,9 @@
       width: 80%;
     }
     &__ttl {
-      font-size: 18px;
       text-align: center;
     }
     &__txt {
-      font-size: 12px;
-      &--sub {
-        font-size: 12px;
-      }
       &--bold {
         font-size: 15px;
       }

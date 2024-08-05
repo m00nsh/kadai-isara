@@ -25,6 +25,7 @@
 }
 .bangkok__txt--bold {
   font-size: 20px;
+  font-weight: bold;
 }
 .bangkok__list {
   margin: 20px 0;
@@ -39,14 +40,7 @@
     width: 80%;
   }
   .bangkok__ttl {
-    font-size: 18px;
     text-align: center;
-  }
-  .bangkok__txt {
-    font-size: 12px;
-  }
-  .bangkok__txt--sub {
-    font-size: 12px;
   }
   .bangkok__txt--bold {
     font-size: 15px;

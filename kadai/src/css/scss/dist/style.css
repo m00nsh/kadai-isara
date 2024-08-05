@@ -838,6 +838,8 @@ html {
 .class__top {
   padding: 40px 0;
   background-image: url(../../../isara_画像素材/classbg.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .class__title {
   color: #fff;
@@ -997,6 +999,53 @@ html {
   float: right;
 }
 
+.bangkok {
+  max-width: 100%;
+  padding: 40px 0;
+  background-image: url(../../../isara_画像素材/bangkokbg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.bangkok__detail {
+  width: 60%;
+  margin: 0 auto;
+}
+.bangkok__ttl {
+  font-size: 24px;
+  margin: 20px 0;
+}
+.bangkok__txt {
+  font-weight: bold;
+  font-size: 16px;
+}
+.bangkok__txt--sub {
+  font-weight: normal;
+  font-size: 14px;
+}
+.bangkok__txt--bold {
+  font-size: 20px;
+  font-weight: bold;
+}
+.bangkok__list {
+  margin: 20px 0;
+  list-style-type: style;
+}
+
+@media screen and (max-width: 786px) {
+  .bangkok {
+    background-image: url(../../../isara_画像素材/bangkokbgsp.jpg);
+  }
+  .bangkok__detail {
+    width: 80%;
+  }
+  .bangkok__ttl {
+    text-align: center;
+  }
+  .bangkok__txt--bold {
+    font-size: 15px;
+  }
+}
 .footer {
   position: relative;
   padding: 40px 15px 20px 15px;
