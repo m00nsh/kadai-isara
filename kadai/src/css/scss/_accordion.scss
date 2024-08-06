@@ -1,0 +1,109 @@
+.accordion {
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  &__ttl {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 20px 5%;
+    text-align: center;
+    border: 1px solid #4682b4;
+    position: relative;
+    z-index: +1;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__inner {
+    display: none;
+    padding: 20px 20px;
+    border-left: 2px solid #daa520;
+    border-right: 2px solid #daa520;
+    border-bottom: 2px solid #daa520;
+    box-sizing: border-box;
+  }
+  &__wrap {
+    height: 100px;
+  }
+  &__txt {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .accordion {
+    &__ttl {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .accordion__ttl {
+    font-size: 16px;
+    text-align: left;
+    padding: 15px 60px 15px 15px;
+  }
+}
+
+// ↓openクラスをつけてアイコンを回転するらしい。
+.icon_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform-origin: center center;
+  transition-duration: 0.2s;
+}
+.icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform-origin: center center;
+  transition-duration: 0.2s;
+  position: relative;
+}
+.accordion_title.open .icon_wrap {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+.icon:before,
+.icon:after {
+  display: flex;
+  content: "";
+  background-color: #fff;
+  border-radius: 10px;
+  width: 18px;
+  height: 4px;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: center center;
+}
+.icon:before {
+  width: 4px;
+  height: 18px;
+  top: 0;
+  left: 7px;
+}
+.accordion_title.open .icon_wrap .icon:before {
+  content: none;
+}
+.accordion_title.open .icon_wrap .icon:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
