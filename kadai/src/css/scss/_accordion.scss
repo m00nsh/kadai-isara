@@ -1,36 +1,37 @@
 .accordion {
+  margin: 0 auto;
   &__container {
-    max-width: 800px;
     margin: 0 auto;
+    color: #333;
+    // background-color: #f5f5f5;
   }
   &__ttl {
     font-size: 26px;
     font-weight: bold;
-    padding: 20px 5%;
-    text-align: center;
-    border: 1px solid #4682b4;
+    padding: 20px 10px;
+    border: 1px solid #ddd;
     position: relative;
     z-index: +1;
     cursor: pointer;
     transition-duration: 0.2s;
     &:hover {
-      opacity: 0.8;
+      text-decoration: underline;
     }
   }
   &__inner {
     display: none;
     padding: 20px 20px;
-    border-left: 2px solid #daa520;
-    border-right: 2px solid #daa520;
-    border-bottom: 2px solid #daa520;
     box-sizing: border-box;
   }
-  &__wrap {
-    height: 100px;
-  }
+
   &__txt {
     margin: 0;
   }
+}
+
+.accordion__ttl.open .accordion__inner {
+  display: block;
+  // margin-bottom: 40px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -40,14 +41,18 @@
     }
   }
 }
-@media screen and (max-width: 767px) {
-  .accordion__ttl {
-    font-size: 16px;
-    text-align: left;
-    padding: 15px 60px 15px 15px;
+@media screen and (max-width: 786px) {
+  .accordion {
+    &__ttl {
+      font-size: 16px;
+      text-align: left;
+      padding: 15px 60px 15px 15px;
+    }
+    &__inner {
+      margin-bottom: 40px;
+    }
   }
 }
-
 // ↓openクラスをつけてアイコンを回転するらしい。
 .icon_wrap {
   display: flex;
@@ -106,4 +111,32 @@
 .accordion_title.open .icon_wrap .icon:after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.accordion {
+  &__ttl {
+    &::after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: 4px solid #000;
+      border-right: 4px solid #000;
+      transform: rotate(-45deg);
+      margin-top: -20px;
+      float: right;
+    }
+  }
+}
+.accordion__ttl.open::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+  transform: rotate(135deg);
+  margin-top: -25px;
+  translate: 0.2s;
+  float: right;
 }

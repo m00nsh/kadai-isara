@@ -39,9 +39,9 @@
     }
   }
   &__wrap {
-    width: 60%;
+    width: 75%;
     margin: 40px auto 0;
-    padding: 40px;
+    padding: 40px 60px;
     border: 2px solid #fff;
   }
   &__detail {
@@ -51,9 +51,7 @@
     &--box {
       margin: 0 auto;
       display: flex;
-    }
-    &--list {
-      width: 33%;
+      justify-content: center;
     }
     &--sp {
       display: none;

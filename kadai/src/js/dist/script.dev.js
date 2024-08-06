@@ -22,15 +22,21 @@ $(function () {
 }); // アコーディオンメニュー
 
 $(function () {
-  // .js-accordion_titleをクリックすると
-  $(".accordion_title--js").click(function () {
-    // クリックした次の要素を展開
-    $(this).next(".accordion__inner--js").slideToggle(); // 展開するときjs-accordion_titleクラスにopenクラスを追加してアイコンを回転
+  // 最初の項目を開いた状態にする
+  $(".accordion__container:first-child .accordion__inner").show();
+  $(".accordion__container:first-child .accordion__ttl").addClass("open");
+  $(".accordion__ttl--js").click(function () {
+    var $this = $(this); // クリックされた項目が既に開いている場合は何もしない
 
-    $(this).toggleClass("open"); // クリックされた.js-accordion_title以外の.js-accordion_titleに隣接する.js-accordion_innerを閉じる処理
+    if ($this.hasClass("open")) {
+      return;
+    } // 全ての項目を閉じる
 
-    $(".accordion__ttl--js").not($(this)).next(".js-accordion_inner").slideUp(); // 閉じられた他の.js-accordion_title要素に追加したopenクラスを外しアイコンを元に戻す処理
 
-    $(".accordion__ttl--js").not($(this)).removeClass("open");
+    $(".accordion__inner--js").slideUp();
+    $(".accordion__ttl--js").removeClass("open"); // クリックされた項目を開く
+
+    $this.next(".accordion__inner--js").slideDown();
+    $this.addClass("open");
   });
 });
