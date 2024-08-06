@@ -1,0 +1,24 @@
+.contact {
+  max-width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  background-color: #f7c23c;
+  &__ttl {
+    margin-bottom: 40px;
+    &::before {
+      content: "";
+      display: inline-block;
+      background-image: url(../../../isara_画像素材/memo.png);
+      background-position: center;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+  &__txt {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+}

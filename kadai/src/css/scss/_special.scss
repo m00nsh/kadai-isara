@@ -9,6 +9,17 @@
 
   &__ttl {
     font-size: 40px;
+    margin-bottom: 40px;
+    &::before {
+      content: "";
+      display: inline-block;
+      background-image: url(../../../isara_画像素材/present.png);
+      background-position: center;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
     &--txt {
       font-size: 16px;
       font-weight: 600;
@@ -28,15 +39,15 @@
     }
   }
   &__wrap {
-    width: 80%;
+    width: 60%;
     margin: 40px auto 0;
     padding: 40px;
     border: 2px solid #fff;
   }
   &__detail {
-    // &--pc {
-    //   display: block;
-    // }
+    &--pc {
+      display: block;
+    }
     &--box {
       margin: 0 auto;
       display: flex;
@@ -44,9 +55,9 @@
     &--list {
       width: 33%;
     }
-    // &--sp {
-    //   display: none;
-    // }
+    &--sp {
+      display: none;
+    }
   }
   &__list {
     width: 250px;
@@ -57,54 +68,126 @@
     display: inline-block;
     border-radius: 50%;
     padding: 15px;
+    &--inner {
+      height: 250px;
+      display: table-cell;
+      vertical-align: middle;
+    }
     &--ttl {
       font-size: 24px;
       color: #ebb94d;
     }
-    &--ttl {
+    &--txt {
       font-size: 14px;
     }
   }
+}
 
-  @media screen and (max-width: 990px) {
-    .special {
-      &detail {
-        &--box {
-          flex-direction: column;
-        }
+@media screen and (max-width: 990px) {
+  .special {
+    &__detail {
+      &--box {
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      &--list {
+        width: 100%;
       }
     }
   }
-  @media screen and (max-width: 768px) {
-    .special {
-      background-position: center calc(100% + 9px);
-      background-size: 175px auto;
-      padding: 20px 0;
-      &__ttl {
-        font-size: 18px;
-        margin-top: 0;
-        margin-bottom: 20px;
-      }
-      &__txt {
-        &--bold {
-          font-size: 18px;
-          bottom: -37px;
-          width: 250px;
-        }
-      }
-      &__wrap {
-        color: #fff;
-        padding: 30px;
-        margin: 0 15px;
-      }
-      // &__detail {
-      //   &--pc {
-      //     display: none;
-      //   }
-      //   &--sp {
-      //     display: block;
-      //   }
-      // }
+}
+@media screen and (max-width: 768px) {
+  .special {
+    background-position: center calc(100% + 9px);
+    background-size: 175px auto;
+    padding: 20px 0;
+    &__ttl {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 20px;
     }
+    &__txt {
+      &--bold {
+        font-size: 18px;
+        bottom: -37px;
+        width: 250px;
+      }
+    }
+    &__wrap {
+      width: 80%;
+      color: #fff;
+      padding: 30px;
+      margin: 0 auto;
+    }
+    &__list {
+      &--ttlsp {
+        color: #ebb94d;
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 50%;
+        font-size: 18px;
+      }
+      &--txtsp {
+        font-size: 12px;
+        margin-left: 20px;
+        margin-bottom: 0;
+        padding: 12px 0;
+        overflow: hidden;
+        text-align: left;
+        width: 60%;
+      }
+    }
+    &__detail {
+      &--pc {
+        display: none;
+      }
+      &--sp {
+        display: block;
+        // width: 90%;
+        margin: 40px auto 20px;
+      }
+      &--boxsp {
+        margin: 0 auto;
+      }
+      &--listsp {
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.specialsub {
+  max-width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  color: #fff;
+  background-image: url(../../../isara_画像素材/specialdetail.jpg);
+  background-position: center;
+  background-size: cover;
+  &__inner {
+    width: 60%;
+    margin: 0 auto;
+  }
+  &__txt {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .specialsub {
+    padding: 20px 0;
+    background-image: url(../../../isara_画像素材/specialdetailsp.jpg);
   }
 }

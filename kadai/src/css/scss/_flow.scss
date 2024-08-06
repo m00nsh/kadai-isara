@@ -1,6 +1,7 @@
 .flow {
   max-width: 100%;
   padding: 40px 0;
+  margin: 0 auto;
   &__ttl {
     text-align: center;
     margin: 20px 0 10px;
@@ -14,10 +15,30 @@
       height: 30px;
       margin-right: 5px;
     }
+    &--bottom {
+      text-align: center;
+    }
+    &--bottom::before {
+      content: "";
+      display: inline-block;
+      background-image: url(../../../isara_画像素材/mail.png);
+      background-position: center;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
   }
   &__img {
     max-width: 100%;
     margin: 60px auto;
+  }
+  &__detail {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 15px;
+    text-align: left;
   }
 }
 

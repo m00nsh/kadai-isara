@@ -1,0 +1,50 @@
+.message {
+  text-align: center;
+  padding: 40px 0;
+  max-width: 100%;
+  &__inner {
+    width: 60%;
+    margin: 0 auto;
+  }
+  &__ttl {
+    &--sub {
+      margin: 30px 0;
+    }
+  }
+  &__content {
+    display: flex;
+  }
+  &__img {
+    width: 20%;
+    height: 20%;
+  }
+
+  &__txt {
+    margin-bottom: 10px;
+    text-align: start;
+    &--box {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .message {
+    &__inner {
+      width: 95%;
+    }
+    &__content {
+      flex-direction: column;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+    &__txt {
+      &--box {
+        margin-left: 0;
+        margin-top: 30px;
+      }
+    }
+  }
+}

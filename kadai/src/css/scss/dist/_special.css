@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .special {
   background-position: center calc(100% - -11px);
   background-repeat: no-repeat;
@@ -9,6 +10,17 @@
 }
 .special__ttl {
   font-size: 40px;
+  margin-bottom: 40px;
+}
+.special__ttl::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../../../isara_画像素材/present.png);
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
 }
 .special__ttl--txt {
   font-size: 16px;
@@ -26,10 +38,13 @@
   margin: 0 auto;
 }
 .special__wrap {
-  width: 80%;
+  width: 60%;
   margin: 40px auto 0;
   padding: 40px;
   border: 2px solid #fff;
+}
+.special__detail--pc {
+  display: block;
 }
 .special__detail--box {
   margin: 0 auto;
@@ -37,6 +52,9 @@
 }
 .special__detail--list {
   width: 33%;
+}
+.special__detail--sp {
+  display: none;
 }
 .special__list {
   width: 250px;
@@ -48,37 +66,112 @@
   border-radius: 50%;
   padding: 15px;
 }
+.special__list--inner {
+  height: 250px;
+  display: table-cell;
+  vertical-align: middle;
+}
 .special__list--ttl {
   font-size: 24px;
   color: #ebb94d;
 }
-.special__list--ttl {
+.special__list--txt {
   font-size: 14px;
 }
+
 @media screen and (max-width: 990px) {
-  .special .specialdetail--box {
+  .special__detail--box {
     flex-direction: column;
+    margin: 0 auto;
+  }
+  .special__detail--list {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
-  .special .special {
+  .special {
     background-position: center calc(100% + 9px);
     background-size: 175px auto;
     padding: 20px 0;
   }
-  .special .special__ttl {
+  .special__ttl {
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 20px;
   }
-  .special .special__txt--bold {
+  .special__txt--bold {
     font-size: 18px;
     bottom: -37px;
     width: 250px;
   }
-  .special .special__wrap {
+  .special__wrap {
+    width: 80%;
     color: #fff;
     padding: 30px;
-    margin: 0 15px;
+    margin: 0 auto;
+  }
+  .special__list--ttlsp {
+    color: #ebb94d;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  .special__list--txtsp {
+    font-size: 12px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    padding: 12px 0;
+    overflow: hidden;
+    text-align: left;
+    width: 60%;
+  }
+  .special__detail--pc {
+    display: none;
+  }
+  .special__detail--sp {
+    display: block;
+    margin: 40px auto 20px;
+  }
+  .special__detail--boxsp {
+    margin: 0 auto;
+  }
+  .special__detail--listsp {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.specialsub {
+  max-width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  color: #fff;
+  background-image: url(../../../isara_画像素材/specialdetail.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.specialsub__inner {
+  width: 60%;
+  margin: 0 auto;
+}
+.specialsub__txt {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .specialsub {
+    padding: 20px 0;
+    background-image: url(../../../isara_画像素材/specialdetailsp.jpg);
   }
 }
