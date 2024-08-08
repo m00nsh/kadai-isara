@@ -80,8 +80,8 @@
 }
 
 .pagetop {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   position: fixed;
   bottom: 90px;
@@ -97,10 +97,10 @@
 
 .arrow {
   display: block;
-  width: 20px;
-  height: 20px;
-  border-top: 6px solid #000;
-  border-right: 6px solid #000;
+  width: 15px;
+  height: 15px;
+  border-top: 5px solid #000;
+  border-right: 5px solid #000;
   transform: rotate(-45deg);
   margin-top: 5px;
 }

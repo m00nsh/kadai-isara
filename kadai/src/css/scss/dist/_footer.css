@@ -5,6 +5,7 @@
   background-color: #ececec;
   text-align: center;
 }
+
 .copy-txt {
   margin-top: 15px;
 }
@@ -14,7 +15,6 @@
     padding: 30px 15px 5px;
   }
 }
-
 .fb-link {
   width: 160px;
   height: 35px;

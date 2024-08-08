@@ -23,20 +23,15 @@ $(function () {
 
 $(function () {
   // 最初の項目を開いた状態にする
-  $(".accordion__container:first-child .accordion__inner").show();
-  $(".accordion__container:first-child .accordion__ttl").addClass("open");
+  $(".accordion__container:first-child .accordion__inner--js").show();
+  $(".accordion__container:first-child .accordion__ttl--js").addClass("open");
   $(".accordion__ttl--js").click(function () {
-    var $this = $(this); // クリックされた項目が既に開いている場合は何もしない
-
-    if ($this.hasClass("open")) {
-      return;
-    } // 全ての項目を閉じる
-
-
-    $(".accordion__inner--js").slideUp();
-    $(".accordion__ttl--js").removeClass("open"); // クリックされた項目を開く
-
-    $this.next(".accordion__inner--js").slideDown();
-    $this.addClass("open");
+    var $this = $(this);
+    $this.next(".accordion__inner--js").slideToggle();
+    $this.toggleClass("open");
+  });
+  $(".accordion__ttl--js").click(function () {
+    $(".accordion__ttl--js").not($this).next(".accordion__inner--js").slideUp();
+    $(".accordion__ttl--js").not($this).removeClass("open");
   });
 });

@@ -147,27 +147,27 @@
 }
 
 // みぎ端の矢印
-.panel__head--ttl {
-  &::after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-top: 4px solid #000;
-    border-right: 4px solid #000;
-    transform: rotate(-45deg);
-    margin-top: 3%;
-    float: right;
-  }
-  &.contents::after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-top: 4px solid #000;
-    border-right: 4px solid #000;
-    transform: rotate(45deg);
-    margin-top: 3%;
-    float: right;
-  }
-}
+// .panel__head--ttl {
+//   &::after {
+//     content: "";
+//     display: block;
+//     width: 10px;
+//     height: 10px;
+//     border-top: 4px solid #000;
+//     border-right: 4px solid #000;
+//     transform: rotate(-45deg);
+//     margin-top: 3%;
+//     float: right;
+//   }
+//   &.contents::after {
+//     content: "";
+//     display: block;
+//     width: 10px;
+//     height: 10px;
+//     border-top: 4px solid #000;
+//     border-right: 4px solid #000;
+//     transform: rotate(45deg);
+//     margin-top: 3%;
+//     float: right;
+//   }
+// }

@@ -22,3 +22,13 @@
   border-radius: 50%;
   position: relative;
 }
+
+@mixin arrow($color, $x) {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 4px solid $color;
+  border-right: 4px solid $color;
+  transform: rotate($x);
+  // translate: 0.2s;
+}

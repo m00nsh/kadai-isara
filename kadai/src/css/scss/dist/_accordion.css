@@ -2,13 +2,13 @@
   margin: 0 auto;
 }
 .accordion__container {
-  margin: 0 auto;
+  margin-bottom: 5px;
   color: #333;
 }
 .accordion__ttl {
   font-size: 26px;
   font-weight: bold;
-  padding: 20px 10px;
+  padding: 20px 20px 20px 10px;
   border: 1px solid #ddd;
   position: relative;
   z-index: 1;
@@ -40,10 +40,14 @@
   .accordion__ttl {
     font-size: 16px;
     text-align: left;
-    padding: 15px 60px 15px 15px;
+    padding: 15px;
   }
-  .accordion__inner {
-    margin-bottom: 40px;
+  .accordion__txt {
+    font-size: 12px;
+  }
+
+  .ac__ttl {
+    font-size: 15px;
   }
 }
 .icon_wrap {
@@ -74,51 +78,15 @@
   position: relative;
 }
 
-.accordion_title.open .icon_wrap {
-  -webkit-transform: rotate(-360deg);
-  transform: rotate(-360deg);
-}
-
-.icon:before,
-.icon:after {
-  display: flex;
-  content: "";
-  background-color: #fff;
-  border-radius: 10px;
-  width: 18px;
-  height: 4px;
-  position: absolute;
-  top: 7px;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  transform-origin: center center;
-}
-
-.icon:before {
-  width: 4px;
-  height: 18px;
-  top: 0;
-  left: 7px;
-}
-
-.accordion_title.open .icon_wrap .icon:before {
-  content: none;
-}
-
-.accordion_title.open .icon_wrap .icon:after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
 .accordion__ttl::after {
   content: "";
   display: block;
   width: 10px;
   height: 10px;
-  border-top: 4px solid #000;
-  border-right: 4px solid #000;
+  border-top: 3px solid #e5e5e5;
+  border-right: 3px solid #e5e5e5;
   transform: rotate(-45deg);
+  translate: 0.2s;
   margin-top: -20px;
   float: right;
 }
@@ -128,10 +96,42 @@
   display: block;
   width: 10px;
   height: 10px;
-  border-top: 4px solid #000;
-  border-right: 4px solid #000;
+  border-top: 3px solid #e5e5e5;
+  border-right: 3px solid #e5e5e5;
   transform: rotate(135deg);
-  margin-top: -25px;
   translate: 0.2s;
+  margin-top: -25px;
   float: right;
+  -webkit-transform: rotate(135deg);
+}
+
+.panel__head {
+  border: none;
+}
+
+.panel__head::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  transform: rotate(-45deg);
+  translate: 0.2s;
+  margin-top: -30px;
+  float: right;
+}
+
+.panel__head.open::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  transform: rotate(135deg);
+  translate: 0.2s;
+  margin-top: -35px;
+  float: right;
+  -webkit-transform: rotate(135deg);
 }

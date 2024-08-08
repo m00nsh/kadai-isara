@@ -51,6 +51,7 @@
   .header__title--sub {
     font-size: 10px;
     order: -1;
+    margin-top: 10px;
   }
   .logo img {
     width: 90px;
@@ -236,8 +237,8 @@ html {
 }
 
 .pagetop {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   position: fixed;
   bottom: 90px;
@@ -253,10 +254,10 @@ html {
 
 .arrow {
   display: block;
-  width: 20px;
-  height: 20px;
-  border-top: 6px solid #000;
-  border-right: 6px solid #000;
+  width: 15px;
+  height: 15px;
+  border-top: 5px solid #000;
+  border-right: 5px solid #000;
   transform: rotate(-45deg);
   margin-top: 5px;
 }
@@ -470,6 +471,7 @@ html {
   color: #ebb94d;
   background-color: #fff;
   top: 0px;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 786px) {
@@ -684,7 +686,6 @@ html {
   margin: 20px 0 50px;
 }
 .member__wrapper {
-  width: 90%;
   margin: 0 auto;
 }
 .member__ttl::before {
@@ -708,7 +709,7 @@ html {
   margin: 0 auto;
 }
 .member__content--box {
-  width: 25%;
+  width: 28%;
 }
 .member__content--img {
   padding: 0;
@@ -996,29 +997,6 @@ html {
     margin-right: 20px;
   }
 }
-.panel__head--ttl::after {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-top: 4px solid #000;
-  border-right: 4px solid #000;
-  transform: rotate(-45deg);
-  margin-top: 3%;
-  float: right;
-}
-.panel__head--ttl.contents::after {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-top: 4px solid #000;
-  border-right: 4px solid #000;
-  transform: rotate(45deg);
-  margin-top: 3%;
-  float: right;
-}
-
 .bangkok {
   max-width: 100%;
   padding: 40px 0;
@@ -1309,28 +1287,40 @@ html {
 }
 
 .footer {
+  font-size: 10px;
   position: relative;
   padding: 40px 15px 20px 15px;
   background-color: #ececec;
   text-align: center;
 }
 
+.copy-txt {
+  margin-top: 15px;
+}
+
 @media screen and (max-width: 786px) {
   .footer {
-    padding: 20px 15px 0 0;
+    padding: 30px 15px 5px;
   }
 }
+.fb-link {
+  width: 160px;
+  height: 35px;
+  border: none;
+  overflow: hidden;
+}
+
 .accordion {
   margin: 0 auto;
 }
 .accordion__container {
-  margin: 0 auto;
+  margin-bottom: 5px;
   color: #333;
 }
 .accordion__ttl {
   font-size: 26px;
   font-weight: bold;
-  padding: 20px 10px;
+  padding: 20px 20px 20px 10px;
   border: 1px solid #ddd;
   position: relative;
   z-index: 1;
@@ -1362,10 +1352,13 @@ html {
   .accordion__ttl {
     font-size: 16px;
     text-align: left;
-    padding: 15px 60px 15px 15px;
+    padding: 15px;
   }
-  .accordion__inner {
-    margin-bottom: 40px;
+  .accordion__txt {
+    font-size: 12px;
+  }
+  .ac__ttl {
+    font-size: 15px;
   }
 }
 .icon_wrap {
@@ -1394,47 +1387,13 @@ html {
   position: relative;
 }
 
-.accordion_title.open .icon_wrap {
-  transform: rotate(-360deg);
-}
-
-.icon:before,
-.icon:after {
-  display: flex;
-  content: "";
-  background-color: #fff;
-  border-radius: 10px;
-  width: 18px;
-  height: 4px;
-  position: absolute;
-  top: 7px;
-  left: 0;
-  transform: rotate(0deg);
-  transform-origin: center center;
-}
-
-.icon:before {
-  width: 4px;
-  height: 18px;
-  top: 0;
-  left: 7px;
-}
-
-.accordion_title.open .icon_wrap .icon:before {
-  content: none;
-}
-
-.accordion_title.open .icon_wrap .icon:after {
-  transform: rotate(-45deg);
-}
-
 .accordion__ttl::after {
   content: "";
   display: block;
   width: 10px;
   height: 10px;
-  border-top: 4px solid #000;
-  border-right: 4px solid #000;
+  border-top: 4px solid #e5e5e5;
+  border-right: 4px solid #e5e5e5;
   transform: rotate(-45deg);
   margin-top: -20px;
   float: right;
@@ -1445,10 +1404,39 @@ html {
   display: block;
   width: 10px;
   height: 10px;
+  border-top: 4px solid #e5e5e5;
+  border-right: 4px solid #e5e5e5;
+  transform: rotate(135deg);
+  margin-top: -25px;
+  float: right;
+  -webkit-transform: rotate(135deg);
+}
+
+.panel__head {
+  border: none;
+}
+
+.panel__head::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+  transform: rotate(-45deg);
+  margin-top: -30px;
+  float: right;
+}
+
+.panel__head.open::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
   border-top: 4px solid #000;
   border-right: 4px solid #000;
   transform: rotate(135deg);
-  margin-top: -25px;
-  translate: 0.2s;
+  margin-top: -35px;
   float: right;
+  -webkit-transform: rotate(135deg);
 }/*# sourceMappingURL=style.css.map */

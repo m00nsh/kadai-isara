@@ -1,14 +1,16 @@
+@use "mixins";
+
 .accordion {
   margin: 0 auto;
   &__container {
-    margin: 0 auto;
+    margin-bottom: 5px;
     color: #333;
     // background-color: #f5f5f5;
   }
   &__ttl {
     font-size: 26px;
     font-weight: bold;
-    padding: 20px 10px;
+    padding: 20px 20px 20px 10px;
     border: 1px solid #ddd;
     position: relative;
     z-index: +1;
@@ -46,13 +48,17 @@
     &__ttl {
       font-size: 16px;
       text-align: left;
-      padding: 15px 60px 15px 15px;
+      padding: 15px;
     }
-    &__inner {
-      margin-bottom: 40px;
+    &__txt {
+      font-size: 12px;
     }
   }
+  .ac__ttl {
+    font-size: 15px;
+  }
 }
+
 // ↓openクラスをつけてアイコンを回転するらしい。
 .icon_wrap {
   display: flex;
@@ -80,63 +86,42 @@
   transition-duration: 0.2s;
   position: relative;
 }
-.accordion_title.open .icon_wrap {
-  -webkit-transform: rotate(-360deg);
-  transform: rotate(-360deg);
-}
-.icon:before,
-.icon:after {
-  display: flex;
-  content: "";
-  background-color: #fff;
-  border-radius: 10px;
-  width: 18px;
-  height: 4px;
-  position: absolute;
-  top: 7px;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  transform-origin: center center;
-}
-.icon:before {
-  width: 4px;
-  height: 18px;
-  top: 0;
-  left: 7px;
-}
-.accordion_title.open .icon_wrap .icon:before {
-  content: none;
-}
-.accordion_title.open .icon_wrap .icon:after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
 
 .accordion {
   &__ttl {
     &::after {
       content: "";
-      display: block;
-      width: 10px;
-      height: 10px;
-      border-top: 4px solid #000;
-      border-right: 4px solid #000;
-      transform: rotate(-45deg);
+      @include mixins.arrow(#e5e5e5, -45deg);
       margin-top: -20px;
       float: right;
     }
   }
 }
+
 .accordion__ttl.open::after {
   content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-top: 4px solid #000;
-  border-right: 4px solid #000;
-  transform: rotate(135deg);
+  @include mixins.arrow(#e5e5e5, 135deg);
   margin-top: -25px;
-  translate: 0.2s;
   float: right;
+  -webkit-transform: rotate(135deg);
+}
+
+.panel {
+  &__head {
+    border: none;
+  }
+}
+
+.panel__head::after {
+  content: "";
+  @include mixins.arrow(#000, -45deg);
+  margin-top: -30px;
+  float: right;
+}
+.panel__head.open::after {
+  content: "";
+  @include mixins.arrow(#000, 135deg);
+  margin-top: -35px;
+  float: right;
+  -webkit-transform: rotate(135deg);
 }

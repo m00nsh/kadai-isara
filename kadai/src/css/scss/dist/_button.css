@@ -1,0 +1,100 @@
+.btn {
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+}
+.btn__header {
+  padding: 11px 40px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 25px;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  color: #fff;
+  background-color: #da6b64;
+  text-align: center;
+}
+.btn__inducement {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 30px 120px;
+  border-radius: 50px;
+  margin: 45px auto;
+  max-width: 50%;
+  width: 500px;
+  color: #fff;
+  background-color: #da6b64;
+  text-align: center;
+}
+.btn__inducement:hover {
+  background-color: #da6b64;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 786px) {
+  .btn__header--sp {
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: #da6b64;
+  }
+  .btn__header--sp img {
+    width: 20px;
+    margin-top: 10px;
+  }
+  .btn__header--txt {
+    margin: 0;
+    font-size: 12px;
+  }
+  .btn__inducement {
+    font-size: 20px;
+    padding: 15px 20px;
+    margin: 20px auto;
+  }
+}
+.sns__btn {
+  text-align: center;
+  margin-top: 13px;
+}
+
+.sns__btn ul {
+  display: flex;
+  justify-content: center;
+}
+
+.tw-btn a,
+.fb-btn iframe {
+  display: inline-block;
+  height: 20px;
+  overflow: hidden;
+}
+
+.pagetop {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 90px;
+  right: 50px;
+  background-color: #ececec;
+  padding: 20px;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.arrow {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-top: 5px solid #000;
+  border-right: 5px solid #000;
+  transform: rotate(-45deg);
+  margin-top: 5px;
+}
